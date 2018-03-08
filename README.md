@@ -12,6 +12,13 @@ Each waypoint in the list contains  [x,y,s,dx,dy] values. x and y are the waypoi
 
 The highway's waypoints loop around so the frenet s value, distance along the road, goes from 0 to 6945.554.
 
+### Achieving the goals
+I've iterated through all the sensor_fusion data (line 269) and I have divided all the car into 3 groups: Cars in my lane (line 274), cars on my left side (295) and cars on my right side (314). 
+For each of these cars, I've checked if they are located within a specific range and it they overpass it, a flag for each car is raised.
+
+Once the flag is raised, my car changes lane (line 334) or it increases or decreases its velocity (line 341).
+
+
 ## Basic Build Instructions
 
 1. Clone this repo.
