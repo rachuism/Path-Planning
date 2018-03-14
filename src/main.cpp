@@ -77,7 +77,7 @@ int NextWaypoint(double x, double y, double theta, const vector<double> &maps_x,
 	double heading = atan2((map_y-y),(map_x-x));
 
 	double angle = fabs(theta-heading);
-  angle = min(2*pi() - angle, angle);
+  angle = min(2*pi() - angle, angle); //Angulo 1 o 2 cuadrante
 
   if(angle > pi()/4) //45 grados
   {
@@ -201,7 +201,7 @@ int main() {
   	map_waypoints_x.push_back(x);
   	map_waypoints_y.push_back(y);
   	map_waypoints_s.push_back(s);
-  	map_waypoints_dx.push_back(d_x);
+  	map_waypoints_dx.push_back(d_x); //Velocidad
 	map_waypoints_dy.push_back(d_y);
   }
 
